@@ -1,4 +1,5 @@
 import json
+from playsound import playsound
 from ibm_watson import ToneAnalyzerV3
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 
@@ -20,5 +21,7 @@ tone_analysis = tone_analyzer.tone(
 ).get_result()
 
 print(json.dumps(tone_analysis, indent=2))
+
+playsound('test.mp3')
 
 keys_file.close()
