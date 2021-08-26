@@ -15,7 +15,7 @@ tone_analyzer = ToneAnalyzerV3(
 )
 tone_analyzer.set_service_url(keys['url'])
 
-text = "I hate you"
+text = input("What are you planning on saying? I'll tell you how you come across. You know can tell me anything.")
 
 tone_analysis = tone_analyzer.tone(
     {"text": text},
